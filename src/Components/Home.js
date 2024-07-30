@@ -27,7 +27,7 @@ export default function Home() {
                 <div id="header" className="flex items-center bg-indigo-500 -mt-[2rem] dark:bg-slate-600 transition duration-500 lg:h-[145px]">
                     <div className="w-1/2 grid grid-cols-2 items-center">
                         <img srcSet={vault} className="lg:m-[12px_auto] lg:ml-[39px] w-[100px]ml-[5px]" alt="" />
-                        <h1 className="lg:m-[35px_auto] text-zinc-50 lg:text-[2.9rem] font-bold lg:-ml-[130px] text-2xl">Password Manager</h1>
+                        <h1 className="lg:m-[35px_auto] text-zinc-50 lg:text-[2.9rem] font-bold lg:-ml-[130px] text-2xl">PassSave</h1>
                     </div>
 
 
@@ -37,8 +37,8 @@ export default function Home() {
 
                 </div>
                 <div id="section-1" className="flex flex-col mb-4 w-full">
-                    <h1 className="text-8xl m-16 text-center tracking-wide">Welcome to password manager</h1>
-                    <p className="m-12 text-center text-2xl">Password manager stores your password,bank account,debit
+                    <h1 className="text-8xl m-16 text-center tracking-wide">Welcome to PassSave</h1>
+                    <p className="m-12 text-center text-2xl">PassSave stores your password,bank account,debit
                         card and credit card details safely.
                         You do not need to remember your password of your every account ,you can just store your password and
                         other details which can make your lives convinient.</p>

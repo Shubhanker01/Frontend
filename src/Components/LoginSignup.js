@@ -27,18 +27,18 @@ export default function LoginSignup() {
             let json = signUp(user.name, user.email, user.password)
             json.then((json) => {
                 if (json.status === 'Pending') {
-                    toast.success(json.message, { position: 'top-right' })
+                    toast.success(json.message, { position: 'top-center' })
                     history.push('/otp-verify')
                 }
                 else {
-                    toast.error(json.message, { position: 'top-right' })
+                    toast.error(json.message, { position: 'top-center' })
                 }
             }).catch((err) => {
                 console.log(err)
             })
         }
         else {
-            toast.error('Please enter correct credentials!!', { position: 'top-right' })
+            toast.error('Please enter correct credentials!!', { position: 'top-center' })
         }
 
     }
@@ -56,14 +56,15 @@ export default function LoginSignup() {
                     history.push(`/main-app/${json.user._id}`)
                 }
                 else {
-                    toast.error(json.message, { position: 'top-cneter', duration: 4000 })
+                    toast.error(json.message, { position: 'top-center', duration: 4000 })
                 }
             }).catch((err) => {
                 console.log(err)
             })
+            getLoginUser({...loginUser,email:"",password:""})
         }
         else {
-            toast.error("Please enter your credentials", { position: 'top-right' })
+            toast.error("Please enter your credentials", { position: 'top-center' })
         }
     }
     

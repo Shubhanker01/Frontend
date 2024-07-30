@@ -63,7 +63,7 @@ const UserState = (props) => {
                 body: JSON.stringify({ email, password })
             })
             const json = await response.json()
-            if (json.status == "Success") {
+            if (json.status === "Success") {
                 getUserId(json.user._id)
                 getName(json.user.name)
             }
