@@ -26,12 +26,12 @@ export default function Home() {
             <div id="body">
                 <div id="header" className="w-screen fixed grid grid-cols-2 bg-indigo-500 -mt-[2rem] dark:bg-slate-600 transition duration-500 h-[80px]">
                     <div className="w-1/4 grid grid-cols-2 items-center">
-                        <img srcSet={vault} className="lg:m-[12px_auto] lg:ml-[39px] w-[50px] h-[50px] ml-[5px]" alt="Image could not be shown" />
+                        <img srcSet={vault} className="w-[50px] h-[30px] ml-[5px]" alt="Image could not be shown" />
                         <h1 className="lg:m-[35px_auto] text-zinc-50 lg:text-[2.9rem] font-bold ml-[30px] text-xl">PassSave</h1>
                     </div>
 
 
-                    <div className="bg-indigo-800 rounded-full text-zinc-100 w-1/4 text-center m-[10px_auto] justify-self-end text-2xl my-8 text-xl ml-[10px] dark:bg-slate-200 dark:text-gray-700">
+                    <div className="bg-indigo-800 rounded-full text-zinc-100 w-24 text-center m-[10px_auto] justify-self-end text-2xl my-8 text-xl ml-[10px] dark:bg-slate-200 dark:text-gray-700">
                         <Link to="/login-signup" className="w-[30px]">Login</Link>
                     </div>
 
@@ -95,32 +95,36 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div id="section-4" className="flex items-center m-[106px_auto] w-2/3 bg-violet-600 rounded-lg">
-                    <div className="m-8">
-                        <img srcSet={signup} alt="" />
+                <div id="section-4" className="flex flex-col items-center m-[106px_auto] w-80 bg-violet-600 rounded-lg">
+                    <div className="m-4">
+                        <img srcSet={signup} className='w-60' alt="" />
                     </div>
 
-                    <div className="m-16">
+                    <div className="m-8">
                         <div className="text-center">
-                            <p className="text-stone-200 text-3xl">If you have not created your account then please click on the
+                            <p className="text-stone-200 text-xl">If you have not created your account then please click on the
                                 sign up link
                                 below
                             </p>
                         </div>
 
-                        <div className="p-2 bg-red-600 rounded-full text-zinc-300 w-1/4 text-center m-[10px_auto] text-2xl">
+                        <div className="p-2 bg-red-600 rounded-full text-zinc-300 w-1/2 text-center m-[10px_auto] text-xl">
                             <Link to="/login-signup">Sign Up</Link>
                         </div>
                     </div>
 
 
                 </div>
-                <div className="flex flex-auto items-center m-16 bg-indigo-700 rounded-lg" id="section-5">
-                    <img src={gif} alt="" className="rounded-full m-8"
-                        srcSet="" />
-                    <img srcSet={consent} className="m-4" alt="" />
-                    <div className="ml-8">
-                        <p className="text-4xl text-center text-zinc-100">Just enter your credentials to get started. No need to pay
+                <div className="flex flex-col items-center m-[50px_auto] bg-indigo-700 rounded-lg w-80" id="section-5">
+                    <div className='mt-4'>
+                        <img src={gif} alt="" className="rounded-full m-2 w-[200px]"
+                            srcSet="" />
+
+                    </div>
+
+                    <div className="m-4 flex">
+                        <img srcSet={consent} className="m-2" alt="" />
+                        <p className="text-md text-center text-zinc-100">Just enter your credentials to get started. No need to pay
                             any penny!!!</p>
                     </div>
 
@@ -128,7 +132,7 @@ export default function Home() {
 
 
                 <div id="footer" className="bg-stone-700 text-zinc-200">
-                    <div id="links" className="list-none grid grid-cols-4 justify-items-center gap-3 mx-2 ">
+                    <div id="links" className="list-none grid grid-rows-4 justify-items-center gap-2 mx-2 ">
                         <li className="p-2"><a href="#">About Us</a></li>
                         <li className="p-2"><a href="#">Contact Us</a></li>
                         <li className="p-2"><a href="#">Help</a></li>
