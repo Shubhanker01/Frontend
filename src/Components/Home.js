@@ -24,21 +24,21 @@ export default function Home() {
     return (
         <>
             <div id="body">
-                <div id="header" className="flex items-center bg-indigo-500 -mt-[2rem] dark:bg-slate-600 transition duration-500 lg:h-[145px]">
-                    <div className="w-1/2 grid grid-cols-2 items-center">
-                        <img srcSet={vault} className="lg:m-[12px_auto] lg:ml-[39px] w-[100px]ml-[5px]" alt="" />
-                        <h1 className="lg:m-[35px_auto] text-zinc-50 lg:text-[2.9rem] font-bold lg:-ml-[130px] text-2xl">PassSave</h1>
+                <div id="header" className="w-screen fixed grid grid-cols-2 bg-indigo-500 -mt-[2rem] dark:bg-slate-600 transition duration-500 h-[80px]">
+                    <div className="w-1/4 grid grid-cols-2 items-center">
+                        <img srcSet={vault} className="lg:m-[12px_auto] lg:ml-[39px] w-[50px] h-[50px] ml-[5px]" alt="Image could not be shown" />
+                        <h1 className="lg:m-[35px_auto] text-zinc-50 lg:text-[2.9rem] font-bold ml-[30px] text-xl">PassSave</h1>
                     </div>
 
 
-                    <div className="bg-indigo-800 rounded-full text-zinc-100 w-1/6 text-center lg:m-[10px_auto] lg:text-2xl lg:my-8 text-xl ml-[10px] dark:bg-slate-200 dark:text-gray-700">
-                        <Link to="/login-signup">Login</Link>
+                    <div className="bg-indigo-800 rounded-full text-zinc-100 w-1/4 text-center m-[10px_auto] justify-self-end text-2xl my-8 text-xl ml-[10px] dark:bg-slate-200 dark:text-gray-700">
+                        <Link to="/login-signup" className="w-[30px]">Login</Link>
                     </div>
 
                 </div>
-                <div id="section-1" className="flex flex-col mb-4 w-full">
-                    <h1 className="text-8xl m-16 text-center tracking-wide">Welcome to PassSave</h1>
-                    <p className="m-12 text-center text-2xl">PassSave stores your password,bank account,debit
+                <div id="section-1" className="flex flex-col mb-4 w-screen pt-[50px]">
+                    <h1 className="text-4xl m-8 text-center tracking-wide">Welcome to PassSave</h1>
+                    <p className="m-6 text-center text-xl mt-[50px] mb-[30px]">PassSave stores your password,bank account,debit
                         card and credit card details safely.
                         You do not need to remember your password of your every account ,you can just store your password and
                         other details which can make your lives convinient.</p>
@@ -46,49 +46,49 @@ export default function Home() {
 
                 <div id="section-3" className="my-20">
                     <h1 className="text-4xl m-8 text-center dark:text-zinc-200">Features</h1>
-                    <div className="grid grid-cols-4 gap-2 justify-items-center m-4">
-                        <div className="features bg-violet-300 rounded-lg w-80">
+                    <div className="grid grid-rows-4 gap-2 justify-items-center m-4">
+                        <div className="features bg-violet-300 rounded-lg w-60">
                             <div className="w-full">
-                                <img srcSet={convenient} className="m-[5px_auto]" alt="" />
+                                <img srcSet={convenient} className="m-[5px_auto] h-[100px] w-[100px]" alt="" />
                             </div>
 
-                            <div className="text-center my-4">
-                                <h2 className="font-bold text-3xl">Convenient</h2>
-                                <p className="m-2 text-xl text-stone-800">Can be accessed anywhere at anytime</p>
+                            <div className="text-center my-2">
+                                <h2 className="font-bold text-xl">Convenient</h2>
+                                <p className="m-2 text-md text-stone-800">Can be accessed anywhere at anytime</p>
                             </div>
 
                         </div>
 
-                        <div className="features bg-violet-300 rounded-lg w-80">
+                        <div className="features bg-violet-300 rounded-lg w-60">
                             <div className="w-full">
-                                <img srcSet={security} className="m-[5px_auto]" />
+                                <img srcSet={security} className="m-[5px_auto] h-[100px] w-[100px]" />
                             </div>
-                            <div className="text-center my-4">
-                                <h2 className="font-bold text-3xl">Secure</h2>
-                                <p className="m-2 text-xl text-stone-800">Your details are kept secured and you do not have to worry
+                            <div className="text-center my-2">
+                                <h2 className="font-bold text-xl">Secure</h2>
+                                <p className="m-2 text-md text-stone-800">Your details are kept secured and you do not have to worry
                                     about your
                                     details getting lost.
                                 </p>
                             </div>
                         </div>
-                        <div className="features bg-violet-300 rounded-lg w-80">
-                            <div className="w-full">
-                                <img srcSet={encryption} className="m-[5px_auto]" alt="" />
+                        <div className="features bg-violet-300 rounded-lg w-60">
+                            <div className="w-full" >
+                                <img srcSet={encryption} className="m-[5px_auto] h-[100px] w-[100px]" alt="" />
                             </div>
-                            <div className="text-center my-4">
-                                <h2 className="text-3xl font-bold">Encrypted</h2>
-                                <p className="m-2 text-xl text-stone-800">Your password will be encrypted and have minimal chances
+                            <div className="text-center my-2">
+                                <h2 className="text-xl font-bold">Encrypted</h2>
+                                <p className="m-2 text-md text-stone-800">Your password will be encrypted and have minimal chances
                                     of getting
                                     hacked.</p>
                             </div>
                         </div>
-                        <div className="features bg-violet-300 rounded-lg w-80">
+                        <div className="features bg-violet-300 rounded-lg w-60">
                             <div className="w-full">
-                                <img srcSet={notes} className="m-[5px_auto]" alt="" />
+                                <img srcSet={notes} className="m-[5px_auto] h-[100px] w-[100px]" alt="" />
                             </div>
-                            <div className="text-center my-4">
-                                <h2 className="text-3xl font-bold">Personal Notes</h2>
-                                <p className="m-2 text-xl text-stone-800">You can add, delete and access your personal notes here.
+                            <div className="text-center my-2">
+                                <h2 className="text-xl font-bold">Personal Notes</h2>
+                                <p className="m-2 text-md text-stone-800">You can add, delete and access your personal notes here.
                                 </p>
                             </div>
                         </div>
