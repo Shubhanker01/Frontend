@@ -27,7 +27,7 @@ export default function Password() {
             {passwordDetails.length === 0 ? (<div className='w-64 m-[0px_auto] fixed top-1/2 left-1/2 -mt-[100px] -ml-[50px] flex items-center'><p className='text-md font-bold mx-2 my-2'>You have not added any details please click on the add button below to save your details.</p>
                 <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-arrow-down-web-flaticons-lineal-color-flat-icons-2.png" className='animate-bounce' alt=''/>
             </div>) :
-                (<div className='w-9/12 mt-12 ml-[11rem]'>
+                (<div className='w-9/12'>
                     <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 
                         {passwordDetails.map((items) => {

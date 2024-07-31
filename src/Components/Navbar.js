@@ -36,10 +36,10 @@ export default function Navbar() {
             <div className='bg-indigo-600 fixed top-0 left-0 right-0 z-10 dark:bg-[#6e6e6e] transition duration-500'>
                 <div className='flex items-center m-2'>
                     <div className='w-4/5 flex'>
-                        <button onClick={toggle}><svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-stone-100" viewBox="0 0 20 20" fill="currentColor">
+                        <button onClick={toggle}><svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-[32px] w-[32px] text-stone-100" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                         </svg></button>
-                        <img src={lock} alt="" className='pl-2 w-[32px] h-[32px]' />
+                        <img src={lock} alt="" className='ml-2 w-[32px] h-[32px]' />
                         <Link to='/'><h1 className='text-lg text-zinc-100 pt-2 pl-4 font-bold dark:text-[#f5f7fA]'>PassSave</h1></Link>
                     </div>
                     <div className='grid grid-cols-2 w-1/2 justify-items-center'>
@@ -52,33 +52,33 @@ export default function Navbar() {
             {profileModal ? (<>
                 <ProfileModal openProfileModal={openProfileModal} name={name} email={email} id={id} />
             </>) : (null)}
-            {!isOpen ? (<div className={`flex flex-col items-center w-20 h-full overflow-hidden text-zinc-100 bg-indigo-700 rounded fixed top-[50px] left-[0px] dark:bg-[#6e6e6e] ${!isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
+            {!isOpen ? (<div className={`flex flex-col items-center w-[4rem] h-full overflow-hidden text-zinc-100 bg-indigo-700 rounded fixed top-[50px] left-[0px] dark:bg-[#6e6e6e] ${!isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
 
                 <div className="w-full px-2 mt-8">
                     <div className="flex flex-col w-full mt-3">
                         <div className='mt-2'>
-                            <NavLink className="flex items-center w-3/4 h-[3.5rem] rounded transform motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 transition ease-in-out duration-300 active:bg-blue-300" activeClassName='bg-slate-900 dark:bg-[#181818]' to={`/main-app/${id}`}>
-                                <img src="https://img.icons8.com/ios-filled/48/ffffff/password.png" className='pl-2 h-[32px] w-[32px]' alt=''/>
+                            <NavLink className="flex items-center w-full h-[3.5rem] rounded transform motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 transition ease-in-out duration-300 active:bg-blue-300" activeClassName='bg-slate-900 dark:bg-[#181818]' to={`/main-app/${id}`}>
+                                <img src="https://img.icons8.com/ios-filled/48/ffffff/password.png" className='ml-2 h-[32px] w-[32px]' alt=''/>
                             </NavLink>
                         </div>
                        
                         <div className='mt-2'>
                             <NavLink className="flex items-center w-full h-[3.5rem] rounded transform motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 transition ease-in-out duration-300" to={`/bankdetails/${id}`} activeClassName='bg-slate-900 dark:bg-[#181818]'>
-                                <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/48/ffffff/external-bank-web-smashingstocks-glyph-smashing-stocks.png" className='pl-2 h-[32px] w-[32px]' alt=''/>
+                                <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/48/ffffff/external-bank-web-smashingstocks-glyph-smashing-stocks.png" className='ml-2 h-[32px] w-[32px]' alt=''/>
 
 
                             </NavLink>
                         </div>
                         <div className='mt-2'>
                             <NavLink className="flex items-center w-full h-[3.5rem] rounded transform motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 transition ease-in-out duration-300" to={`/card-details/${id}`} activeClassName='bg-slate-900 dark:bg-[#181818]'>
-                                <img src="https://img.icons8.com/external-photo3ideastudio-solid-photo3ideastudio/48/ffffff/external-credit-card-food-delivery-photo3ideastudio-solid-photo3ideastudio.png" className='pl-2 h-[32px] w-[32px]' alt=''/>
+                                <img src="https://img.icons8.com/external-photo3ideastudio-solid-photo3ideastudio/48/ffffff/external-credit-card-food-delivery-photo3ideastudio-solid-photo3ideastudio.png" className='ml-2 h-[32px] w-[32px]' alt=''/>
 
                             </NavLink>
                         </div>
 
                         <div className='mt-2'>
                             <NavLink className="flex items-center w-full h-[3.5rem] rounded transform motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 transition ease-in-out duration-300" to={`/settings/${id}`} activeClassName='bg-slate-900 dark:bg-[#181818]'>
-                                <img src="https://img.icons8.com/material-rounded/48/ffffff/settings.png" className='pl-2 h-[32px] w-[32px]' alt=''/>
+                                <img src="https://img.icons8.com/material-rounded/48/ffffff/settings.png" className='ml-2 h-[32px] w-[32px]' alt=''/>
 
                             </NavLink>
                         </div>

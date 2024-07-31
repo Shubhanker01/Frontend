@@ -23,17 +23,17 @@ export default function AddDetails(props) {
     return (
         <>
             <div className='fixed bottom-[50px] right-[55px]'>
-                <button className='' ref={ref} ><img src="https://img.icons8.com/ios-filled/75/4a90e2/add--v1.png" onClick={() => setShowModal(true)} alt=''/></button>
+                <button className='' ref={ref} ><img src="https://img.icons8.com/ios-filled/75/4a90e2/add--v1.png" className='h-[32px] w-[32px]' onClick={() => setShowModal(true)} alt=''/></button>
             </div>
             {showModal ? (
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative w-[35rem] my-6 mx-auto max-w-3xl bg-stone-100 dark:bg-[#11171D] rounded-xl">
+                        <div className="relative w-[20rem] my-6 mx-auto  bg-stone-100 dark:bg-[#11171D] rounded-xl">
 
                             {/*body*/}
-                            <form className="w-5/6 m-[0px_auto]">
+                            <form className="w-3/4 m-[0px_auto]">
                                 <div className="md:flex md:items-center my-[2rem]">
                                     <div className="md:w-1/3 py-2">
                                         <label className="block text-gray-700 font-bold md:text-right mb-1 md:mb-0 pr-2 text-xl dark:text-gray-200" htmlFor="inline-full-name">
