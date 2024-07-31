@@ -26,12 +26,12 @@ export default function Home() {
             <div id="body">
                 <div id="header" className="w-screen fixed grid grid-cols-2 bg-indigo-500 -mt-[2rem] dark:bg-slate-600 transition duration-500 h-[80px]">
                     <div className="w-1/4 grid grid-cols-2 items-center">
-                        <img srcSet={vault} className="w-[50px] h-[30px] ml-[5px]" alt="Image could not be shown" />
+                        <img srcSet={vault} className="w-[50px] h-[30px] ml-[15px]" alt="Image could not be shown" />
                         <h1 className="lg:m-[35px_auto] text-zinc-50 lg:text-[2.9rem] font-bold ml-[30px] text-xl">PassSave</h1>
                     </div>
 
 
-                    <div className="bg-indigo-800 rounded-full text-zinc-100 w-24 text-center m-[10px_auto] justify-self-end text-2xl my-8 text-xl ml-[10px] dark:bg-slate-200 dark:text-gray-700">
+                    <div className="bg-indigo-800 rounded-full text-zinc-100 w-24 text-center m-[10px_auto] justify-self-end my-8 text-md ml-[10px] dark:bg-slate-200 dark:text-gray-700">
                         <Link to="/login-signup" className="w-[30px]">Login</Link>
                     </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
                         other details which can make your lives convinient.</p>
                 </div>
 
-                <div id="section-3" className="my-20">
+                <div id="section-3" className="my-20 w-screen">
                     <h1 className="text-4xl m-8 text-center dark:text-zinc-200">Features</h1>
                     <div className="grid grid-rows-4 gap-2 justify-items-center m-4">
                         <div className="features bg-violet-300 rounded-lg w-60">

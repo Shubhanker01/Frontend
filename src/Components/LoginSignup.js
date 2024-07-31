@@ -94,7 +94,7 @@ export default function LoginSignup() {
     }, [])
 
     return (
-        <div className='grid w-full h-full place-items-center'>
+        <div className='grid w-95 h-full place-items-center'>
 
             <div className="wrapper">
                 <div className="title-text">

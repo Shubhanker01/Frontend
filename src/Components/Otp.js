@@ -57,13 +57,13 @@ export default function Otp() {
 
 
     return (
-        <div className='w-1/2 m-[95px_auto]'>
+        <div className='w-80 m-[60px_auto]'>
             <div className="bg-slate-100 py-3 rounded text-center dark:bg-slate-700">
-                <h1 className="text-3xl font-bold py-4 dark:text-gray-200">OTP Verification</h1>
-                <p className='text-xl dark:text-gray-200'>Enter the OTP received in your email</p>
+                <h1 className="text-xl font-bold py-4 dark:text-gray-200">OTP Verification</h1>
+                <p className='text-md dark:text-gray-200'>Enter the OTP received in your email</p>
 
                 <div>
-                    <div className='w-full m-[0_auto]'>
+                    <div className='w-80 m-[0_auto]'>
                         <form className="mt-5 text-slate-700">
                             {otp.map((data, index) => {
                                 return <input className="inline-block w-[50px] h-[50px] text-center border-[0px] border-b-4 border-b-indigo-500 m-2 text-lg dark:bg-gray-300 dark:text-gray-900" type="text" key={index} value={data} maxLength={1} onChange={(e) => { handleChange(e.target, index) }} onFocus={(e) => e.target.select()} />
@@ -72,8 +72,8 @@ export default function Otp() {
                     </div>
 
                     <div className='flex items-center w-1/2 m-[15px_auto]'>
-                        <button className='bg-indigo-600 text-stone-200 text-xl rounded-md p-2 ml-8 dark:bg-slate-600' onClick={e => setOtp([...otp.map(value => "")])}>Clear</button>
-                        <input type="submit" value="Verify OTP" className='bg-indigo-600 text-stone-200 text-xl rounded-md p-2 ml-16 cursor-pointer dark:bg-slate-600' onClick={() => { verifyOtp(userId, otp.join("")) }} />
+                        <button className='bg-indigo-600 text-stone-200 text-md rounded-md p-2 ml-2 dark:bg-slate-600' onClick={e => setOtp([...otp.map(value => "")])}>Clear</button>
+                        <input type="submit" value="Verify OTP" className='bg-indigo-600 text-stone-200 text-md rounded-md p-2 ml-2 cursor-pointer dark:bg-slate-600' onClick={() => { verifyOtp(userId, otp.join("")) }} />
 
                     </div>
                 </div>
