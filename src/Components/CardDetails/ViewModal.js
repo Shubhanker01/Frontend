@@ -20,13 +20,13 @@ export default function ViewModal(props) {
             <div
                 className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             >
-                <div className="relative w-[37rem] h-[32rem] my-3 mx-auto max-w-6xl bg-stone-100 rounded-xl dark:bg-[#11171D]">
+                <div className="relative w-[20rem] h-[32rem] my-3 mx-auto max-w-6xl bg-stone-100 rounded-xl dark:bg-[#11171D]">
 
                     {/*body*/}
                     <form className="w-full m-[10px_auto]">
                         <div className="md:items-center my-[1rem] mx-[2rem]">
                             <div className="md:w-1/3">
-                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-xl dark:text-gray-200" htmlFor="inline-full-name">
+                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-md dark:text-gray-200" htmlFor="inline-full-name">
                                     Title
                                 </label>
                             </div>
@@ -36,7 +36,7 @@ export default function ViewModal(props) {
                         </div>
                         <div className="md:items-center my-[1rem] mx-[2rem]">
                             <div className="md:w-1/3">
-                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-xl dark:text-gray-200" htmlFor="inline-password">
+                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-md dark:text-gray-200" htmlFor="inline-password">
                                     Card Name
                                 </label>
                             </div>
@@ -46,7 +46,7 @@ export default function ViewModal(props) {
                         </div>
                         <div className="md:items-center my-[1rem] mx-[2rem]">
                             <div className="md:w-1/3">
-                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-xl dark:text-gray-200" htmlFor="inline-password">
+                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-md dark:text-gray-200" htmlFor="inline-password">
                                     Card Type
                                 </label>
                             </div>
@@ -62,7 +62,7 @@ export default function ViewModal(props) {
                         </div>
                         <div className="md:items-center my-[1rem] mx-[2rem]">
                             <div className="md:w-1/3">
-                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-xl dark:text-gray-200" htmlFor="inline-password">
+                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-md dark:text-gray-200" htmlFor="inline-password">
                                     Card Number
                                 </label>
                             </div>
@@ -72,7 +72,7 @@ export default function ViewModal(props) {
                         </div>
                         <div className="md:items-center my-[1rem] mx-[2rem]">
                             <div className="md:w-1/3">
-                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-xl dark:text-gray-200" htmlFor="inline-password">
+                                <label className="block text-gray-700 font-bold mb-1 md:mb-0 pr-2 text-md dark:text-gray-200" htmlFor="inline-password">
                                     CVV
                                 </label>
                             </div>
