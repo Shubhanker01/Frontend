@@ -25,7 +25,7 @@ export default function EditModal(props) {
             <div
                 className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             >
-                <div className="relative w-[35rem] my-6 mx-auto max-w-3xl bg-stone-100 rounded-xl dark:bg-[#11171D]">
+                <div className="relative w-[20rem] my-6 mx-auto bg-stone-100 rounded-xl dark:bg-[#11171D]">
 
                     {/*body*/}
                     <form className="w-5/6 m-[0px_auto]">

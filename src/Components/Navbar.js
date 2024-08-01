@@ -86,7 +86,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>) : (
-                <div className={`flex flex-col items-center w-32 h-full overflow-hidden text-zinc-100 bg-indigo-800 rounded fixed top-[50px] left-[0px] dark:bg-[#6e6e6e] ${isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
+                <div className={`flex flex-col items-center w-32 h-full overflow-hidden text-zinc-100 bg-indigo-800 rounded fixed top-[50px] left-[0px] z-10 dark:bg-[#6e6e6e] ${isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
 
                     <div className={`w-full px-2 mt-8 `}>
                         <div className="flex flex-col w-full mt-3">

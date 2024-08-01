@@ -22,7 +22,7 @@ export default function AddDetails(props) {
     return (
         <>
             <div className='fixed bottom-[50px] right-[55px]'>
-                <button className='' ref={ref} ><img src="https://img.icons8.com/ios-filled/75/4a90e2/add--v1.png" onClick={() => setShowModal(true)} alt=''/></button>
+                <button className='' ref={ref} ><img src="https://img.icons8.com/ios-filled/75/4a90e2/add--v1.png" className='h-[32px] w-[32px]' onClick={() => setShowModal(true)} alt=''/></button>
             </div>
 
             {showModal ? (
