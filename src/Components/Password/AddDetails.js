@@ -22,8 +22,8 @@ export default function AddDetails(props) {
     const refClose = useRef(null)
     return (
         <>
-            <div className='fixed bottom-[50px] right-[55px]'>
-                <button className='' ref={ref} ><img src="https://img.icons8.com/ios-filled/75/4a90e2/add--v1.png" className='h-[32px] w-[32px]' onClick={() => setShowModal(true)} alt=''/></button>
+            <div className='fixed bottom-[50px] right-[55px] z-10'>
+                <button className='' ref={ref} ><img src="https://img.icons8.com/ios-filled/75/4a90e2/add--v1.png" className='h-[32px] w-[32px]' onClick={() => setShowModal(true)} alt='' /></button>
             </div>
             {showModal ? (
                 <>
