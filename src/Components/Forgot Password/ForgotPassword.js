@@ -49,10 +49,10 @@ export default function ForgotPassword() {
                         </div>
                     </div>
                     <div className="form-container">
-                        <div className='text-center my-4 font-bold text-md'>
+                        <div className='text-center my-4 font-bold text-sm'>
                             <p>Note : Please enter only the email address which has been verified and linked to your account. OTP will be sent to that email address and then you can reset your password</p>
                         </div>
-                        <div className='font-bold text-xl my-2'>
+                        <div className='font-bold text-md my-2'>
                             <label htmlFor="enter">Please enter your Email Address</label>
                         </div>
                         <div className="form-inner">

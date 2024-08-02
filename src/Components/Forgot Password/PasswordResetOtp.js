@@ -54,27 +54,27 @@ export default function PasswordResetOtp() {
 
     return (
         <>
-            <div className='w-1/2 m-[65px_auto]'>
+            <div className='w-[90%] m-[35px_auto]'>
                 <div className="bg-slate-100 py-3 rounded text-center dark:bg-slate-700">
-                    <h1 className="text-3xl font-bold py-4 dark:text-gray-200">Reset Password</h1>
-                    <p className='text-xl dark:text-gray-200'>Note : You have received your OTP. Please enter the OTP and set your new password.After resetting your password you will be redirected back to login page</p>
+                    <h1 className="text-xl font-bold py-4 dark:text-gray-200">Reset Password</h1>
+                    <p className='text-md text-center dark:text-gray-200'>Note : You have received your OTP. Please enter the OTP and set your new password.After resetting your password you will be redirected back to login page</p>
 
                     <div>
-                        <div className='w-full m-[0_auto]'>
-                            <form className="mt-5 text-slate-700">
+                        <div className='w-full'>
+                            <form className="mt-3 text-slate-700">
                                 <div>
-                                    <div className='flex items-center my-2'>
-                                        <label className='w-2/5 px-4 text-lg dark:text-gray-200'>New Password</label>
-                                        <input type="password" className='w-1/2 my-2 rounded border-indigo-400 border-2 focus:border-indigo-600 mx-4' value={user.password} onChange={onChange} name='password' />
+                                    <div className='my-2'>
+                                        <label className='text-md text-left dark:text-gray-200'>New Password</label>
+                                        <input type="password" className='my-2 rounded border-indigo-400 border-2 focus:border-indigo-600 mx-2' value={user.password} onChange={onChange} name='password' />
                                     </div>
-                                    <div className='flex items-center my-2'>
-                                        <label className='w-2/5 px-4 text-lg dark:text-gray-200'>Confirm New Password</label>
-                                        <input type="password" className='w-1/2 my-2 rounded border-indigo-400 border-2 focus:border-indigo-600 mx-4' value={user.confirmPassword} onChange={onChange} name='confirmPassword' />
+                                    <div className='my-2'>
+                                        <label className='text-md dark:text-gray-200'>Confirm New Password</label>
+                                        <input type="password" className='my-2 rounded border-indigo-400 border-2 focus:border-indigo-600 mx-2' value={user.confirmPassword} onChange={onChange} name='confirmPassword' />
                                     </div>
                                 </div>
                                 <div className='flex flex-col'>
                                     <div>
-                                        <label className='w-2/5 text-lg dark:text-gray-200'>Enter OTP</label>
+                                        <label className='w-2/5 text-md dark:text-gray-200'>Enter OTP</label>
 
                                     </div>
 
@@ -90,9 +90,9 @@ export default function PasswordResetOtp() {
                             </form>
                         </div>
 
-                        <div className='flex items-center w-1/2 m-[15px_auto]'>
-                            <button className='bg-indigo-600 text-stone-200 text-xl rounded-md p-2 ml-16 hover:bg-blue-800 dark:bg-slate-600 dark:hover:bg-slate-700' onClick={e => setOtp([...otp.map(value => "")])}>Clear</button>
-                            <input type="submit" value="Reset" className='bg-indigo-600 text-stone-200 text-xl rounded-md p-2 ml-16 cursor-pointer hover:bg-blue-800 dark:bg-slate-600 dark:hover:bg-slate-700' onClick={handleClick} />
+                        <div className='flex items-center w-[50%] m-[15px_auto]'>
+                            <button className='bg-indigo-600 text-stone-200 text-md rounded-md p-2 ml-4 hover:bg-blue-800 dark:bg-slate-600 dark:hover:bg-slate-700' onClick={e => setOtp([...otp.map(value => "")])}>Clear</button>
+                            <input type="submit" value="Reset" className='bg-indigo-600 text-stone-200 text-md rounded-md p-2 ml-2 cursor-pointer hover:bg-blue-800 dark:bg-slate-600 dark:hover:bg-slate-700' onClick={handleClick} />
 
                         </div>
                     </div>

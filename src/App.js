@@ -22,7 +22,7 @@ import PasswordResetOtp from "./Components/Forgot Password/PasswordResetOtp";
 import LightDarkMode from "./Components/LightDarkMode";
 
 function App() {
-  
+
   return (
     <>
       <Toaster />
@@ -45,7 +45,7 @@ function App() {
                 <Navbar />
                 <MainApp />
               </Route>
-              
+
               <Route exact path={'/bankdetails/:id'}>
                 <Navbar />
                 <UserBankState>
