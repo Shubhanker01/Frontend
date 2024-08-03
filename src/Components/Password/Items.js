@@ -26,8 +26,8 @@ export default function Items(props) {
 
     return (
         <>
-            <div className="rounded overflow-hidden shadow-lg w-[150px] bg-blue-300 dark:bg-[#696969] transform motion-safe:hover:scale-110 transition ease-in-out duration-300 m-[0px_auto]">
-                <div className='w-full bg-indigo-200 dark:bg-[#363636] py-2 h-[30px]'>
+            <div className="rounded overflow-hidden shadow-lg w-[150px] bg-blue-300 dark:bg-[#0F172A] transform motion-safe:hover:scale-110 transition ease-in-out duration-300 m-[0px_auto]">
+                <div className='w-full bg-indigo-200 dark:bg-[#0F172A] py-2 h-[30px]'>
                     <img src="https://img.icons8.com/ios-filled/50/000000/password.png" className='m-[0px_auto] h-[20px] w-[20px] dark:invert' />
                 </div>
                 <div className='h-[60px] grid grid-cols-1 my-2'>

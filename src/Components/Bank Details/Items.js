@@ -13,8 +13,8 @@ export default function Items(props) {
     }
     return (
         <>
-            <div className="rounded overflow-hidden shadow-lg w-[150px] bg-blue-300 dark:bg-[#696969] m-[0px_auto]">
-                <div className='w-full bg-indigo-200 py-2 dark:bg-[#363636] h-[30px]'>
+            <div className="rounded overflow-hidden shadow-lg w-[150px] bg-blue-300 dark:bg-[#0F172A] m-[0px_auto]">
+                <div className='w-full bg-indigo-200 py-2 dark:bg-[#0F172A] h-[30px]'>
                     <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/50/000000/external-bank-web-smashingstocks-glyph-smashing-stocks.png" className='m-[0px_auto] h-[20px] w-[20px] dark:invert' />
                 </div>
                 <div className='h-[60px] grid grid-cols-1 my-2'>

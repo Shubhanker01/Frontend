@@ -33,7 +33,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className='bg-indigo-600 fixed top-0 left-0 right-0 z-10 dark:bg-[#6e6e6e] transition duration-500'>
+            <div className='bg-indigo-600 fixed top-0 left-0 right-0 z-10 dark:bg-[#4B5569] transition duration-500'>
                 <div className='flex items-center m-2'>
                     <div className='w-4/5 flex'>
                         <button onClick={toggle}><svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-[32px] w-[32px] text-stone-100" viewBox="0 0 20 20" fill="currentColor">
@@ -52,7 +52,7 @@ export default function Navbar() {
             {profileModal ? (<>
                 <ProfileModal openProfileModal={openProfileModal} name={name} email={email} id={id} />
             </>) : (null)}
-            {!isOpen ? (<div className={`flex flex-col items-center w-[4rem] h-full overflow-hidden text-zinc-100 bg-indigo-700 rounded fixed top-[50px] left-[0px] dark:bg-[#6e6e6e] ${!isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
+            {!isOpen ? (<div className={`flex flex-col items-center w-[4rem] h-full overflow-hidden text-zinc-100 bg-indigo-700 rounded fixed top-[50px] left-[0px] dark:bg-[#4B5569] ${!isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
 
                 <div className="w-full px-2 mt-8">
                     <div className="flex flex-col w-full mt-3">
@@ -86,7 +86,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>) : (
-                <div className={`flex flex-col items-center w-32 h-full overflow-hidden text-zinc-100 bg-indigo-800 rounded fixed top-[50px] left-[0px] z-10 dark:bg-[#6e6e6e] ${isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
+                <div className={`flex flex-col items-center w-32 h-full overflow-hidden text-zinc-100 bg-indigo-800 rounded fixed top-[50px] left-[0px] z-10 dark:bg-[#4B5569] ${isOpen ? 'translate-x-[0px]' : 'translate-x-0'} ease-in-out duration-300`}>
 
                     <div className={`w-full px-2 mt-8 `}>
                         <div className="flex flex-col w-full mt-3">
