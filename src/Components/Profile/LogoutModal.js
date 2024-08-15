@@ -17,6 +17,7 @@ export default function LogoutModal(props) {
         setProgress(progress + 50)
         setProgress(100)
         toast.success("Logged Out!!", { duration: 4000, position: 'top-center' })
+        sessionStorage.removeItem('token')
         getUserId("")
     }
 

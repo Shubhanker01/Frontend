@@ -13,7 +13,8 @@ export default function UserPasswordState(props) {
             let response = await fetch(`${host}/password/add/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ title, password })
             })
@@ -37,11 +38,21 @@ export default function UserPasswordState(props) {
             let response = await fetch(`${host}/password/read/${id}`, {
                 method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 }
             })
-            let json = await response.json()
-            getPasswordDetails(json.data)
+            if (response.status == 401) {
+                let json = await response.json()
+                toast.error(json.message, { duration: 4000, position: 'top-center' })
+                getPasswordDetails([])
+            }
+            else {
+                let json = await response.json()
+                getPasswordDetails(json.data)
+            }
+
+
 
         } catch (error) {
             console.log(error)
@@ -51,7 +62,10 @@ export default function UserPasswordState(props) {
     const deletePasswordDetails = async (id) => {
         try {
             let response = await fetch(`${host}/password/delete/${id}`, {
-                method: 'DELETE'
+                method: 'DELETE',
+                headers: {
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
+                }
             })
             let json = await response.json()
             if (json.status === 'Success') {
@@ -75,7 +89,8 @@ export default function UserPasswordState(props) {
             let response = await fetch(`${host}/password/update/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ title, password })
             })
