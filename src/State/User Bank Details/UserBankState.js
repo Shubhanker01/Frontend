@@ -11,17 +11,25 @@ export default function UserBankState(props) {
             const response = await fetch(`${host}/bank-details/fetch/${id}`, {
                 method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 }
             })
             const json = await response.json()
-            if (json.status === 'Success') {
-                setBankDetails(json.data)
-
+            if (response.status == 401) {
+                toast.error(json.message, { duration: 4000, position: 'top-center' })
+                setBankDetails([])
             }
             else {
-                console.log('error')
+                if (json.status === 'Success') {
+                    setBankDetails(json.data)
+
+                }
+                else {
+                    toast.error(json.message, { duration: 4000, position: 'top-center' })
+                }
             }
+
 
         } catch (error) {
             console.log(error)
@@ -33,7 +41,8 @@ export default function UserBankState(props) {
             const response = await fetch(`${host}/bank-details/add/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ title: obj.title, bankName: obj.bankName, accountNo: obj.accountNo, accountType: obj.accountType, pin: obj.pin })
             })
@@ -56,7 +65,8 @@ export default function UserBankState(props) {
             const response = await fetch(`${host}/bank-details/update/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ title: obj.title, bankName: obj.bankName, accountNo: obj.accountNo, accountType: obj.accountType, pin: obj.pin })
             })
@@ -91,7 +101,8 @@ export default function UserBankState(props) {
             const response = await fetch(`${host}/bank-details/delete/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 }
             })
             const json = await response.json()

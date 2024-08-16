@@ -45,6 +45,7 @@ export default function Otp() {
         }
         else {
             toast.success(json.message, { position: 'top-right' })
+            sessionStorage.setItem('token',json.token)
             history.push(`/main-app/${id}`)
         }
     }

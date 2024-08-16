@@ -12,16 +12,23 @@ export default function UserCardState(props) {
             const response = await fetch(`${host}/paymentcard/fetch/${id}`, {
                 method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 }
             })
             const json = await response.json()
-            if (json.status === 'Success') {
-                setCardDetails(json.data)
+            if(response.status==401){
+                toast.error(json.message,{position:'top-center',duration:4000})
             }
-            else {
-                console.log('error')
+            else{
+                if (json.status === 'Success') {
+                    setCardDetails(json.data)
+                }
+                else {
+                    toast.error(json.message,{position:'top-center',duration:4000})
+                }
             }
+            
         } catch (error) {
             console.log(error)
         }
@@ -32,7 +39,8 @@ export default function UserCardState(props) {
             const response = await fetch(`${host}/paymentcard/add/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ title: obj.title, cardName: obj.cardName, cardType: obj.cardType, number: obj.number, securityCode: obj.securityCode })
             })
@@ -54,7 +62,8 @@ export default function UserCardState(props) {
             const response = await fetch(`${host}/paymentcard/delete/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 }
             })
             const json = await response.json()
@@ -77,7 +86,8 @@ export default function UserCardState(props) {
             const response = await fetch(`${host}/paymentcard/update/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ title: obj.title, cardName: obj.cardName, cardType: obj.cardType, number: obj.number, securityCode: obj.securityCode })
             })
