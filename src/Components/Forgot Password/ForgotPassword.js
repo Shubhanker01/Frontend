@@ -24,13 +24,13 @@ export default function ForgotPassword() {
         json.then((json) => {
             if (json.status === 'Pending') {
                 toast.success(json.message, { duration: 4000, position: 'top-center' })
+                sessionStorage.setItem('reset-token',json.token)
                 history.push(`/otp-passwordreset/${json.userId}`)
             }
             else {
                 toast.error(json.message, { duration: 4000, position: 'top-center' })
             }
         })
-
     }
 
     useEffect(() => {

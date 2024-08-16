@@ -17,6 +17,7 @@ export default function DeleteAccModal(props) {
         deleteAcc(userId)
         refClose.current.click()
         history.push('/')
+        sessionStorage.clear()
         setProgress(progress + 50)
         setProgress(100)
     }

@@ -117,16 +117,22 @@ const UserState = (props) => {
             const response = await fetch(`${host}/user/deleteaccount`, {
                 method: 'DELETE',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ userId: id })
             })
             const json = await response.json()
-            if (json.status === 'Success') {
-                toast.success(json.message, { duration: 4000, position: 'top-center' })
+            if(response.status==401){
+                toast.error(json.message,{duration:4000,position:'top-center'})
             }
-            else {
-                toast.error(json.message, { duration: 4000, position: 'top-center' })
+            else{
+                if (json.status === 'Success') {
+                    toast.success(json.message, { duration: 4000, position: 'top-center' })
+                }
+                else {
+                    toast.error(json.message, { duration: 4000, position: 'top-center' })
+                }
             }
         } catch (error) {
             console.log(error)
@@ -155,12 +161,19 @@ const UserState = (props) => {
             const response = await fetch(`${host}/reset/otp/${id}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "Authorization": `Bearer ${sessionStorage.getItem('reset-token')}`
                 },
                 body: JSON.stringify({ otp: otp, password: obj.password, confirmPassword: obj.confirmPassword })
             })
             const json = await response.json()
-            return json
+            if(response.status==401){
+                toast.error(json.message,{duration:4000,position:'top-center'})
+            }
+            else{
+                return json
+            }
+            
         } catch (error) {
             console.log(error)
         }

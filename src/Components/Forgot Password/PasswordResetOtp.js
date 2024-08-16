@@ -40,6 +40,7 @@ export default function PasswordResetOtp() {
             if (json.status === 'Success') {
                 toast.success(json.message, { duration: 4000, position: 'top-center' })
                 history.push(`/login-signup`)
+                sessionStorage.clear()
             }
             else {
                 toast.error(json.message, { duration: 4000, position: 'top-center' })
