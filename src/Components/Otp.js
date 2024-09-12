@@ -27,7 +27,7 @@ export default function Otp() {
         }
 
     }
-    const host = 'http://localhost:4001'
+    const host = 'https://passsave-backend.onrender.com'
 
     // verify the otp of the user
     const verifyOtp = async (id, otp) => {
