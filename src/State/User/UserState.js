@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 const UserState = (props) => {
 
-    const host = 'http://localhost:4001'
+    const host = 'https://passsave-backend.onrender.com'
     const [userId, getUserId] = useState("")
     const [name, getName] = useState("")
     const [email, getEmail] = useState("")

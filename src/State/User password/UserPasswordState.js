@@ -3,7 +3,7 @@ import UserPasswordContext from '../../Context/User passwords/UserPassword'
 import toast from 'react-hot-toast';
 
 export default function UserPasswordState(props) {
-    const host = 'http://localhost:4001'
+    const host = 'https://passsave-backend.onrender.com'
     let [passwordDetails, getPasswordDetails] = useState([])
 
 

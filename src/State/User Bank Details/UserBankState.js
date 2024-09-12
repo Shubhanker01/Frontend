@@ -3,7 +3,7 @@ import UserBankContext from '../../Context/User Bank Details/UserBankContext'
 import toast from 'react-hot-toast';
 
 export default function UserBankState(props) {
-    const host = 'http://localhost:4001'
+    const host = 'https://passsave-backend.onrender.com'
     const [bankDetails, setBankDetails] = useState([])
 
     const fetchDetails = async (id) => {

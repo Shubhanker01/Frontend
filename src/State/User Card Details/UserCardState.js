@@ -3,7 +3,7 @@ import UserCardContext from '../../Context/User Card Context/UserCardContext'
 import toast from 'react-hot-toast';
 
 export default function UserCardState(props) {
-    const host = 'http://localhost:4001'
+    const host = 'https://passsave-backend.onrender.com'
 
     const [cardDetails, setCardDetails] = useState([])
 
